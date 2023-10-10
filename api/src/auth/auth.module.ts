@@ -11,7 +11,7 @@ import { UserService } from "src/user/user.service";
         PrismaModule,
         forwardRef (() => UserModule),
         JwtModule.register({
-        secret: "D-i+rucRe3uCro*8_hAWR8?A4#u?er0c"
+        secret: process.env.JWT_SECRET
     })],
     controllers:[AuthController],
     providers: [AuthService, UserService],

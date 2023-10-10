@@ -8,8 +8,10 @@ import { Roles } from "src/decorators/role.decorator";
 import { Role } from "src/enums/role.enum";
 import { RoleGuard } from "src/guards/role.guard";
 import { AuthGuard } from "src/guards/auth.guard";
+import { ThrottlerGuard } from "@nestjs/throttler";
 
 // @UseInterceptors(LogInterceptor)
+
 
 @Roles(Role.Admin)
 @UseGuards(AuthGuard, RoleGuard)
